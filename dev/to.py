@@ -7,11 +7,16 @@
 @本段代码的视频说明     ：
 '''
 import time
+from pathlib import Path
 
-from poemail.core.base import BaseEmail
+from poemail.core.BaseEmail import BaseEmail
 
-e = BaseEmail(key='xxx',
-              msg_from='程序员晚枫@qq.com',
-              msg_to='程序员晚枫@qq.com',
-              msg_subject='自动发邮件')
-e.send_pure_text('测试' + str(time.time()))
+# e = BaseEmail(key='xxx',
+#               msg_from='程序员晚枫@qq.com',
+#               msg_to='程序员晚枫@qq.com',
+#               msg_subject='自动发邮件')
+# e.send_text('测试' + str(time.time()))
+
+
+file_info = Path(r'./test.py')
+print(file_info.name)

@@ -6,12 +6,25 @@
 @代码日期    ：2023/12/18 23:56 
 @本段代码的视频说明     ：
 '''
-from poemail.core.base import BaseEmail
+from poemail.core.BaseEmail import BaseEmail
 
 
 def send_text(key, msg_from, msg_to, msg_subject='', content='', host='smtp.qq.com', port=465):
+    """
+    发送文本邮件
+
+    参数:
+    key (str): 邮箱验证密钥
+    msg_from (str): 发件人邮箱地址
+    msg_to (str): 收件人邮箱地址
+    msg_subject (str, 可选): 邮件主题，默认为空字符串
+    content (str, 可选): 邮件内容，默认为空字符串
+    host (str, 可选): 邮件服务器地址，默认为'smtp.qq.com'
+    port (int, 可选): 邮件服务器端口号，默认为465
+    """
     e_server = BaseEmail(key=key,
                          msg_from=msg_from,
                          msg_to=msg_to,
                          msg_subject=msg_subject)
     e_server.send_text(content)
+

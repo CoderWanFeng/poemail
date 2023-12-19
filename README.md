@@ -1,4 +1,3 @@
-
 <p align="center" id='大礼包-banner'>
     <a target="_blank" href='http://python4office.cn/fuli/fuli-source-0726/'>
     <img src="https://banner-1300615378.cos.ap-guangzhou.myqcloud.com/%E6%A8%AA%E6%9D%A1/Python%E5%A4%A7%E7%A4%BC%E5%8C%85.jpg" width="100%"/>
@@ -16,11 +15,11 @@
 
 
 <p align="center" name="'github">
-    <a target="_blank" href='https://github.com/CoderWanFeng/python-office'>
-    <img src="https://img.shields.io/github/stars/CoderWanFeng/python-office.svg?style=social" alt="github star"/>
+    <a target="_blank" href='https://github.com/CoderWanFeng/poemail'>
+    <img src="https://img.shields.io/github/stars/CoderWanFeng/poemail.svg?style=social" alt="github star"/>
     </a>
-    	<a target="_blank" href='https://gitee.com/CoderWanFeng/python-office'>
-		<img src='https://gitee.com/CoderWanFeng//python-office/badge/star.svg?theme=dark' alt='gitee star'/>
+    	<a target="_blank" href='https://gitee.com/CoderWanFeng/poemail'>
+		<img src='https://gitee.com/CoderWanFeng/poemail/badge/star.svg?theme=dark' alt='gitee star'/>
 	</a>
   	<a href="https://mp.weixin.qq.com/s/yaSmFKO3RrBpyanW3nvRAQ">
 	<img src="https://img.shields.io/badge/QQ-163434413-orange"/>
@@ -33,11 +32,9 @@
 
 -------------------------------------------------------------------------------
 
-
 ## 📚简介
 
-
-poemail是用Python自动发邮件的工具箱。
+``poemail``是用Python自动发邮件的工具箱
 
 -------------------------------------------------------------------------------
 
@@ -49,36 +46,21 @@ poemail是用Python自动发邮件的工具箱。
 pip install -i https://mirrors.aliyun.com/pypi/simple/ poemail -U
 ```
 
-
 -------------------------------------------------------------------------------
 
 ## 📝功能
 
 [📘官网：https://www.python-office.com/](https://www.python-office.com/)
 
+- 第1讲：[软件下载和安装](https://www.bilibili.com/video/BV118411R7bB/)
+- 第2讲：[免费开通权限](http://www.python4office.cn/log/2023/12/poemail/1219-email002/)
+- 第3讲：[自动发正文](http://www.python4office.cn/log/2023/12/poemail/1219-email003/)
+- 第4讲：[自动发正文+附件](./docs/10-04-chat_by_keywords.html)
+- 第5讲：[自动批量发送](./docs/10-05-def.html)
 
 ## 🏗️添砖加瓦
 
-
-### 📐PR的建议
-
-python-office欢迎任何人来添砖加瓦，贡献代码，建议提交的pr（pull request）符合一些规范，规范如下：
-
-参与项目建设的步骤：
-- 例如：你需要给python-office添加一个add方法。
-   1. 你的Github账户名为：demo
-   2. 于是你在./contributors新建了文件夹./demo
-   3. 新建了add.py文件，编辑你的代码
-   4. 编辑完成，提交pr到master分支（gitee或者GitHub，都可以）。可以注明你对自己功能的取名建议
-   5. 晚枫收到后，会对各位的代码进行测试后，合并后打包上传到python官方库
-
-### 📐代码规范
-
-1. 注释完备，尤其每个新增的方法应按照Google Python文档规范标明方法说明、参数说明、返回值说明等信息，必要时请添加单元测试，如果愿意，也可以加上你的大名。
-2. python-office的文档，需要进行格式化。注意：只能格式化你自己的代码
-3. 请直接pull request到`master`分支。`master`是主分支，表示已经发布pypi库的版本。**未来参与人数增多，会开辟新的分支，请留意本文档的更新。**
-4. 我们如果关闭了你的issue或pr，请不要诧异，这是我们保持问题处理整洁的一种方式，你依旧可以继续讨论，当有讨论结果时我们会重新打开。
-
+``poemail``欢迎任何人来添砖加瓦，贡献代码，建议提交的pr（pull request）符合一些规范，规范如下：
 
 ### 🧬贡献代码的步骤
 
@@ -89,7 +71,6 @@ python-office欢迎任何人来添砖加瓦，贡献代码，建议提交的pr�
 5. 登录Gitee或Github在你首页可以看到一个 pull request 按钮，点击它，填写一些说明信息，然后提交到master分支即可。
 6. 等待维护者合并
 
-
 ### 🐞提供bug反馈或建议
 
 提交问题反馈时，请务必填写和python-office代码本身有关的问题，不进行有关python学习，甚至是个人练习的知识答疑和讨论。
@@ -98,9 +79,7 @@ python-office欢迎任何人来添砖加瓦，贡献代码，建议提交的pr�
 
 -------------------------------------------------------------------------------
 
-
 ## 📌联系作者
-
 
 <p align="center" id='开源交流群-banner'>
 <a target="_blank" href='https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/python-office.jpg'>
