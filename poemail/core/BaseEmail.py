@@ -41,7 +41,7 @@ class BaseEmail:
         # 使用服务器发送邮件
         self.server.sendmail(self.msg_from, [self.msg_to], msg.as_string())
 
-    def send_file(self, file_path):
+    def send_file(self, content, file_path):
         # 定义一个可以添加正文和附件的邮件消息对象
         msg = MIMEMultipart()
         # 发件人昵称和地址
@@ -50,6 +50,10 @@ class BaseEmail:
         msg['To'] = self.msg_to
         # 抄送人昵称和地址
         # msg['Cc'] = 'xxx<xxx@qq.com>;xxx<xxx@qq.com>'
+        # 邮件主题
+        msg['Subject'] = self.msg_subject
+        # 将文本内容添加到邮件消息对象中
+        msg.attach(MIMEText(content, 'plain', 'utf-8'))
         file_info = Path(file_path)
         file_attach = MIMEApplication(open(str(file_info.absolute()), 'rb').read())
         file_attach["Content-Type"] = 'application/octet-stream'  # 设置内容类型

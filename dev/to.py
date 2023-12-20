@@ -7,6 +7,7 @@
 @本段代码的视频说明     ：
 '''
 import time
+from datetime import datetime
 from pathlib import Path
 
 from poemail.core.BaseEmail import BaseEmail
@@ -18,5 +19,4 @@ from poemail.core.BaseEmail import BaseEmail
 # e.send_text('测试' + str(time.time()))
 
 
-file_info = Path(r'./test.py')
-print(file_info.name)
+print(datetime.now().strftime('%Y-%m-%d %H:%M:%S'))
