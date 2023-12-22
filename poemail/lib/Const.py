@@ -15,3 +15,22 @@ DEFAULT_CONFIG_PATH_NAME = DEFAULT_CONFIG_PATH + DEFAULT_CONFIG_NAME
 FACE_URL = "https://aip.baidubce.com/rest/2.0/face/v1/merge?access_token="
 
 SPLIT_LINE = '=' * 30
+
+Mail_Type = {
+    'qq': 'smtp.qq.com',
+   #  '163': '163',
+   #  '126': '126',
+   #  'gmail': 'gmail',
+   #  'outlook': 'outlook',
+   #  '139': '139',
+   # 'sina':'sina',
+   #  'hotmail': 'hotmail',
+}
+
+Result_Type = {
+   'success':'success',
+    'error': 'error',
+    'warning': 'warning',
+    'info': 'info',
+    'debug': 'debug',
+}

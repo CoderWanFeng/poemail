@@ -60,3 +60,10 @@ class BaseEmail:
         file_attach.add_header('Content-Disposition', 'attachment', filename=str(file_info.name))  # 添加到header信息
         msg.attach(file_attach)
         self.server.sendmail(self.msg_from, [self.msg_to], msg.as_string())
+
+    def send_mail(self, content, file_path=None):
+        # 根据文件参数是否为空，选择对应的方法
+        if file_path:
+            self.send_file(content, file_path)
+        else:
+            self.send_text(content)
