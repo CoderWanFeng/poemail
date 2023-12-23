@@ -31,7 +31,8 @@ def send_text(key, msg_from, msg_to, msg_subject='', content='', host='smtp.qq.c
     e_server.send_text(content)
 
 
-def send_email(key, msg_from, msg_to, attach_files=[], msg_subject='', content='', host=Mail_Type['qq'], port=465):
+def send_email(key, msg_from, msg_to, msg_cc=None, attach_files=[], msg_subject='', content='', host=Mail_Type['qq'],
+               port=465):
     """
     发送邮件函数
 
@@ -52,8 +53,8 @@ def send_email(key, msg_from, msg_to, attach_files=[], msg_subject='', content='
     e_server = SendEmail(key=key,
                          msg_from=msg_from,
                          msg_to=msg_to,
+                         msg_cc=msg_cc,
                          msg_subject=msg_subject,
                          host=host,
                          port=port)
     res = e_server.send_mail(content, attach_files)
-
