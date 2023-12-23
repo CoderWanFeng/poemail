@@ -6,14 +6,11 @@
 @代码日期    ：2023/12/18 23:56 
 @本段代码的视频说明     ：
 '''
-from pocode.api.lifecycle import deprecated
 
-from poemail.core.BaseEmail import BaseEmail
 from poemail.core.SendEmail import SendEmail
 from poemail.lib.Const import Mail_Type
 
 
-@deprecated(version='0.0.2', demo="http://www.python4office.cn/log/2023/12/poemail/1219-email003/")
 def send_text(key, msg_from, msg_to, msg_subject='', content='', host='smtp.qq.com', port=465):
     """
     发送文本邮件
@@ -34,4 +31,29 @@ def send_text(key, msg_from, msg_to, msg_subject='', content='', host='smtp.qq.c
     e_server.send_text(content)
 
 
+def send_email(key, msg_from, msg_to, attach_files=[], msg_subject='', content='', host=Mail_Type['qq'], port=465):
+    """
+    发送邮件函数
+
+    参数:
+    key (str): 邮箱账户密钥
+    msg_from (str): 发件人邮箱地址
+    msg_to (str): 收件人邮箱地址
+    file_path (str, 可选): 邮件附件路径，默认为None
+    msg_subject (str, 可选): 邮件主题，默认为空字符串
+    content (str, 可选): 邮件内容，默认为空字符串
+    host (str, 可选): 邮箱服务器地址，默认为'qq'
+    port (int, 可选): 邮箱服务器端口号，默认为465
+
+    返回:
+    无
+
+    """
+    e_server = SendEmail(key=key,
+                         msg_from=msg_from,
+                         msg_to=msg_to,
+                         msg_subject=msg_subject,
+                         host=host,
+                         port=port)
+    res = e_server.send_mail(content, attach_files)
 

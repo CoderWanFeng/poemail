@@ -28,9 +28,7 @@ Mail_Type = {
 }
 
 Result_Type = {
-   'success':'success',
-    'error': 'error',
-    'warning': 'warning',
-    'info': 'info',
-    'debug': 'debug',
+   '200':'success',
+    '404': 'error',
+    '500': 'warning'
 }
