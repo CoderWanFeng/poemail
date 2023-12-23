@@ -17,44 +17,38 @@ from poemail.lib.Const import Result_Type
 
 class SendEmail(BaseEmail):
 
-    def send_text(self, content):
-        # 定义一个可以添加正文的邮件消息对象
-        msg = MIMEMultipart()
+    def __init__(self, key, msg_from, msg_to, msg_subject='', host='smtp.qq.com', port=465, msg_cc=None):
+        super().__init__(key, msg_from, msg_to, msg_subject, host, port)
         # 定义一个可以添加正文和附件的邮件消息对象
-        msg = MIMEMultipart()
+        self.msg = MIMEMultipart()
         # 发件人昵称和地址
-        msg['From'] = self.msg_from
+        self.msg['From'] = self.msg_from
         # 收件人昵称和地址
-        msg['To'] = self.msg_to
+        self.msg['To'] = self.msg_to
         # 抄送人昵称和地址
-        # msg['Cc'] = 'xxx<xxx@qq.com>;xxx<xxx@qq.com>'
+        if msg_cc:
+            self.msg['Cc'] = msg_cc
         # 邮件主题
-        msg['Subject'] = self.msg_subject
+        self.msg['Subject'] = self.msg_subject
+
+    def send_text(self, content):
+
         # 将文本内容添加到邮件消息对象中
-        msg.attach(MIMEText(content, 'plain', 'utf-8'))
+        self.msg.attach(MIMEText(content, 'plain', 'utf-8'))
         # 使用服务器发送邮件
-        self.server.sendmail(self.msg_from, [self.msg_to], msg.as_string())
+        self.server.sendmail(self.msg_from, [self.msg_to], self.msg.as_string())
 
     def send_file(self, content, files):
-        # 定义一个可以添加正文和附件的邮件消息对象
-        msg = MIMEMultipart()
-        # 发件人昵称和地址
-        msg['From'] = self.msg_from
-        # 收件人昵称和地址
-        msg['To'] = self.msg_to
-        # 抄送人昵称和地址
-        # msg['Cc'] = 'xxx<xxx@qq.com>;xxx<xxx@qq.com>'
-        # 邮件主题
-        msg['Subject'] = self.msg_subject
+
         # 将文本内容添加到邮件消息对象中
-        msg.attach(MIMEText(content, 'plain', 'utf-8'))
+        self.msg.attach(MIMEText(content, 'plain', 'utf-8'))
         for file_path in files:
             file_info = Path(file_path)
             file_attach = MIMEApplication(open(str(file_info.absolute()), 'rb').read())
             file_attach["Content-Type"] = 'application/octet-stream'  # 设置内容类型
             file_attach.add_header('Content-Disposition', 'attachment', filename=str(file_info.name))  # 添加到header信息
-            msg.attach(file_attach)
-        self.server.sendmail(self.msg_from, [self.msg_to], msg.as_string())
+            self.msg.attach(file_attach)
+        self.server.sendmail(self.msg_from, [self.msg_to], self.msg.as_string())
 
     def send_mail(self, content, attach_files=[]):
         print(f'【{self.msg_from}】给【{self.msg_to}】发送邮件...')
