@@ -50,7 +50,7 @@ pip install -i https://mirrors.aliyun.com/pypi/simple/ poemail -U
 
 ## 📝功能
 
-[📘官网：https://www.python-office.com/](https://www.python-office.com/)
+[📘官方教程：https://www.python-office.com/course-002/poemail/poemail.html](https://www.python-office.com/course-002/poemail/poemail.html)
 
 
 - 第1讲：[Python环境的下载和安装](https://www.python-office.com/course-002/poemail/docs/1-install_python_pycharm.html)
