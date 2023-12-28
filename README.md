@@ -52,34 +52,28 @@ pip install -i https://mirrors.aliyun.com/pypi/simple/ poemail -U
 
 [📘官网：https://www.python-office.com/](https://www.python-office.com/)
 
-- 第1讲：[软件下载和安装](https://www.bilibili.com/video/BV118411R7bB/)
-- 第2讲：[免费开通权限](http://www.python4office.cn/log/2023/12/poemail/1219-email002/)
-- 第3讲：[自动发正文](http://www.python4office.cn/log/2023/12/poemail/1219-email003/)
-- 第4讲：[自动发正文+附件](./docs/10-04-chat_by_keywords.html)
-- 第5讲：[自动批量发送](./docs/10-05-def.html)
+
+- 第1讲：[Python环境的下载和安装](https://www.python-office.com/course-002/poemail/docs/1-install_python_pycharm.html)
+- 第2讲：[免费开通权限](https://www.python-office.com/course-002/poemail/docs/2-auth_mail.html)
+- 第3讲：[1行代码，自动发正文](https://www.python-office.com/course-002/poemail/docs/3-send_mail_content.html)
+- 第4讲：[1行代码，自动发正文+附件](https://www.python-office.com/course-002/poemail/docs/4-send_mail_content_file.html)
+- 第5讲：[自动批量发送](https://www.python-office.com/course-002/poemail/docs/5-batch_send_mail_content_file.html)
+- 第6讲：[1行代码，自动下载邮件的附件](https://www.python-office.com/course-002/poemail/docs/6-receive_mail_attchment.html)
+- 第7讲：[结合微信机器人，自动收发邮件](https://www.python-office.com/course-002/poemail/docs/7-ai_email.html)
 
 ## 🏗️添砖加瓦
 
 ``poemail``欢迎任何人来添砖加瓦，贡献代码，建议提交的pr（pull request）符合一些规范，规范如下：
 
-### 🧬贡献代码的步骤
-
-1. 在Gitee或者Github上fork项目到自己的repo
-2. 把fork过去的项目也就是你的项目clone到你的本地
-3. 修改代码
-4. commit后push到自己的库
-5. 登录Gitee或Github在你首页可以看到一个 pull request 按钮，点击它，填写一些说明信息，然后提交到master分支即可。
-6. 等待维护者合并
-
 ### 🐞提供bug反馈或建议
 
-提交问题反馈时，请务必填写和python-office代码本身有关的问题，不进行有关python学习，甚至是个人练习的知识答疑和讨论。
+提交问题反馈时，请务必填写和代码本身有关的问题，不建议进行有关python学习，甚至是个人练习的知识答疑和讨论。
 
 - [Github issue](https://github.com/CoderWanFeng/poemail/issues)
 
 -------------------------------------------------------------------------------
 
-## 📌联系作者
+## 📌用户群
 
 <p align="center" id='开源交流群-banner'>
 <a target="_blank" href='https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/python-office.jpg'>
