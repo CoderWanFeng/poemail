@@ -5,9 +5,11 @@ from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 from pathlib import Path
 
+from poemail.lib.Const import Mail_Type
+
 
 class BaseEmail:
-    def __init__(self, key, msg_from, msg_to, msg_subject='', host='smtp.qq.com', port=465):
+    def __init__(self, key, msg_from, msg_to, msg_subject='', host=Mail_Type['163'], port=465):
         self.key = key  # 设置密钥
         self.msg_from = msg_from  # 设置发件人
         self.msg_to = msg_to  # 设置收件人

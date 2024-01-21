@@ -18,17 +18,11 @@ SPLIT_LINE = '=' * 30
 
 Mail_Type = {
     'qq': 'smtp.qq.com',
-   #  '163': '163',
-   #  '126': '126',
-   #  'gmail': 'gmail',
-   #  'outlook': 'outlook',
-   #  '139': '139',
-   # 'sina':'sina',
-   #  'hotmail': 'hotmail',
+    '163': 'smtp.163.com',
 }
 
 Result_Type = {
-   '200':'success',
+    '200': 'success',
     '404': 'error',
     '500': 'warning'
 }

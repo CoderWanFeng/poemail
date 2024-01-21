@@ -1,8 +1,8 @@
 # -*- coding: UTF-8 -*-
 '''
-@作者  ：B站/抖音/微博/小红书/公众号，都叫：程序员晚枫
-@微信     ：CoderWanFeng : https://mp.weixin.qq.com/s/Nt8E8vC-ZsoN1McTOYbY2g
-@个人网站      ：www.python-office.com
+@作者  ：B站/抖音/微博/小红书/公众号，都叫：程序员晚枫，微信：CoderWanFeng
+@读者群     ：http://www.python4office.cn/wechat-group/
+@学习网站      ：www.python-office.com
 @代码日期    ：2023/12/18 23:56 
 @本段代码的视频说明     ：
 '''
@@ -14,7 +14,7 @@ from poemail.lib.Const import Mail_Type
 
 
 @deprecated(version='0.0.2', demo="http://www.python4office.cn/log/2023/12/poemail/1219-email003/")
-def send_text(key, msg_from, msg_to, msg_subject='', content='', host='smtp.qq.com', port=465):
+def send_text(key, msg_from, msg_to, msg_subject='', content='', host=Mail_Type['163'], port=465):
     """
     发送文本邮件
 
