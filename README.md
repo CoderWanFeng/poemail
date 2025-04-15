@@ -70,6 +70,8 @@ pip install -i https://mirrors.aliyun.com/pypi/simple/ poemail -U
 提交问题反馈时，请务必填写和代码本身有关的问题，不建议进行有关python学习，甚至是个人练习的知识答疑和讨论。
 
 - [Github issue](https://github.com/CoderWanFeng/poemail/issues)
+- [Gitee issue](https://gitee.com/CoderWanFeng/poemail/issues)
+- [GitCode issue](https://gitcode.com/python4office/poemail/issues)
 
 -------------------------------------------------------------------------------
 
