@@ -11,10 +11,10 @@ from datetime import datetime
 
 import poemail
 
-key = "acwz...ejd"
-msg_from = "1639972003@qq.com"
-msg_to = "yaaakaaang@gmail.com"
-msg_cc = "15723221495@163.com;CoderWanFeng@163.com"
+key = os.getenv('EMAIL_KEY')
+msg_from = os.getenv('EMAIL_FROM')
+msg_to = os.getenv('EMAIL_TO')
+msg_cc = os.getenv('EMAIL_CC')
 
 poemail.send.send_email(key=key,
                         msg_from=msg_from,
