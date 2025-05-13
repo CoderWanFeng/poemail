@@ -37,7 +37,8 @@ class SendEmail(BaseEmail):
         self.msg.attach(MIMEText(content, 'plain', 'utf-8'))
         # 使用服务器发送邮件
         cc_list = self.msg['Cc'].split(';')  # 将抄送人字符串拆分为列表
-        self.server.sendmail(self.msg_from, [self.msg_to, *cc_list], self.msg.as_string())
+        msg_to = self.msg_to.split(';')
+        self.server.sendmail(self.msg_from, [*msg_to, *cc_list], self.msg.as_string())
         print(f'【{self.msg_from}】给抄送人【{cc_list}】等{len(cc_list)}人发送邮件成功!')
 
     def send_file(self, content, files):
@@ -51,7 +52,8 @@ class SendEmail(BaseEmail):
             file_attach.add_header('Content-Disposition', 'attachment', filename=str(file_info.name))  # 添加到header信息
             self.msg.attach(file_attach)
         cc_list = self.msg['Cc'].split(';')  # 将抄送人字符串拆分为列表
-        self.server.sendmail(self.msg_from, [self.msg_to, *cc_list], self.msg.as_string())
+        msg_to = self.msg_to.split(';')
+        self.server.sendmail(self.msg_from, [*msg_to, *cc_list], self.msg.as_string())
         print(f'【{self.msg_from}】给抄送人【{cc_list}】等{len(cc_list)}人发送邮件成功!')
 
     def send_mail(self, content, attach_files=[]):
