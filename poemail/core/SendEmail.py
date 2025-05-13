@@ -36,7 +36,9 @@ class SendEmail(BaseEmail):
         # 将文本内容添加到邮件消息对象中
         self.msg.attach(MIMEText(content, 'plain', 'utf-8'))
         # 使用服务器发送邮件
-        self.server.sendmail(self.msg_from, [self.msg_to], self.msg.as_string())
+        cc_list = self.msg['Cc'].split(';')  # 将抄送人字符串拆分为列表
+        self.server.sendmail(self.msg_from, [self.msg_to, *cc_list], self.msg.as_string())
+        print(f'【{self.msg_from}】给抄送人【{cc_list}】等{len(cc_list)}人发送邮件成功!')
 
     def send_file(self, content, files):
 
@@ -48,7 +50,9 @@ class SendEmail(BaseEmail):
             file_attach["Content-Type"] = 'application/octet-stream'  # 设置内容类型
             file_attach.add_header('Content-Disposition', 'attachment', filename=str(file_info.name))  # 添加到header信息
             self.msg.attach(file_attach)
-        self.server.sendmail(self.msg_from, [self.msg_to], self.msg.as_string())
+        cc_list = self.msg['Cc'].split(';')  # 将抄送人字符串拆分为列表
+        self.server.sendmail(self.msg_from, [self.msg_to, *cc_list], self.msg.as_string())
+        print(f'【{self.msg_from}】给抄送人【{cc_list}】等{len(cc_list)}人发送邮件成功!')
 
     def send_mail(self, content, attach_files=[]):
         print(f'【{self.msg_from}】给【{self.msg_to}】发送邮件...')
