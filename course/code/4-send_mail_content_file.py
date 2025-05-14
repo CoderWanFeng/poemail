@@ -26,11 +26,11 @@ poemail.send.send_email(key=key,
                         content='测试邮件发送' + str(datetime.now().strftime('%Y-%m-%d %H:%M:%S')),
                         attach_files=attach_files)
 
-import office
-
-office.email.send_email(key=key,
-                        msg_from=msg_from,
-                        msg_to=msg_to,
-                        msg_cc=msg_cc,
-                        msg_subject='带附件的邮件' + str(datetime.now().strftime('%Y-%m-%d %H:%M:%S')),
-                        content='测试邮件发送' + str(datetime.now().strftime('%Y-%m-%d %H:%M:%S')))
+# import office
+#
+# office.email.send_email(key=key,
+#                         msg_from=msg_from,
+#                         msg_to=msg_to,
+#                         msg_cc=msg_cc,
+#                         msg_subject='带附件的邮件' + str(datetime.now().strftime('%Y-%m-%d %H:%M:%S')),
+#                         content='测试邮件发送' + str(datetime.now().strftime('%Y-%m-%d %H:%M:%S')))
