@@ -18,10 +18,13 @@ from pofile import fix_unsaved_char, mkdir
 from poemail.core.BaseEmail import BaseEmail
 
 
-class ReceiveEmail(BaseEmail):
-    def __init__(self, key, msg_from, msg_to, msg_subject='', host='smtp.qq.com', port=465, base_output_path=r'./',
-                 status="UNSEEN"):
-        super().__init__(key, msg_from, msg_to, msg_subject, host, port)
+class ReceiveEmail:
+    def __init__(self, key, msg_from, msg_subject='', host='imap.qq.com', port=993, base_output_path=r'./', status="UNSEEN"):
+        self.key = key
+        self.msg_from = msg_from
+        self.msg_subject = msg_subject
+        self.host = str(host)
+        self.port = port
         self.base_output_path = base_output_path
         self.status = status
 

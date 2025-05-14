@@ -12,19 +12,10 @@ import poemail
 
 key = os.getenv('EMAIL_KEY')
 msg_from = os.getenv('EMAIL_FROM')
-msg_to = os.getenv('EMAIL_TO')
-#
+
+
 poemail.receive.receive_email(key=key,
                               msg_from=msg_from,
-                              msg_to=msg_to,
-                              output_path=r'./test_files/6',
-                              status="ALL")
+                              output_path=r'E:\poemail\tests',
+                              status="UNSEEN")
 
-#
-# import office
-#
-# office.email.receive_email(key=key,
-#                            msg_from=msg_from,
-#                            msg_to=msg_to,
-#                            output_path=r'./test_files/6',
-#                            status="ALL")
