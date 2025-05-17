@@ -10,7 +10,7 @@
 	👉 <a target="_blank" href="https://www.python-office.com/">项目官网：https://www.python-office.com/</a> 👈
 </p>
 <p align="center">
-	👉 <a target="_blank" href="https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/python-office.jpg">本开源项目的交流群</a> 👈
+	👉 <a target="_blank" href="http://www.python4office.cn/wechat-group/">本开源项目的交流群</a> 👈
 </p>
 
 
@@ -24,7 +24,7 @@
   	<a href="https://mp.weixin.qq.com/s/yaSmFKO3RrBpyanW3nvRAQ">
 	<img src="https://img.shields.io/badge/QQ-163434413-orange"/>
   </a>
-    	<a href="https://mp.weixin.qq.com/s/NN2pX2bQPpczOeGF4ARNtw">
+    	<a href="http://www.python4office.cn/wechat-group/">
 	<img src="https://img.shields.io/badge/%E5%BE%AE%E4%BF%A1-%E4%BA%A4%E6%B5%81%E7%BE%A4-brightgreen"/>
   </a>
 </p>
@@ -70,13 +70,15 @@ pip install -i https://mirrors.aliyun.com/pypi/simple/ poemail -U
 提交问题反馈时，请务必填写和代码本身有关的问题，不建议进行有关python学习，甚至是个人练习的知识答疑和讨论。
 
 - [Github issue](https://github.com/CoderWanFeng/poemail/issues)
+- [Gitee issue](https://gitee.com/CoderWanFeng/poemail/issues)
+- [GitCode issue](https://gitcode.com/python4office/poemail/issues)
 
 -------------------------------------------------------------------------------
 
 ## 📌用户群
 
 <p align="center" id='开源交流群-banner'>
-<a target="_blank" href='https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/python-office.jpg'>
-<img src="https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/python-office-qr.jpg" width="100%"/>
+<a target="_blank" href='https://cos.python-office.com/group%2Ffree-group.jpg'>
+<img src="https://cos.python-office.com/group/python-office-qr.jpg" width="100%"/>
 </a> 
 </p>

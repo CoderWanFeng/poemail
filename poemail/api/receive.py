@@ -10,18 +10,14 @@ from poemail.core.ReceiveEmail import ReceiveEmail
 from poemail.lib.Const import Mail_Type
 
 
-def receive_email(key, msg_from, msg_to, output_path=r'./', status="UNSEEN", msg_subject='', content='',
+def receive_email(key, msg_from, output_path=r'./', status="UNSEEN", msg_subject='',
                   host=Mail_Type['qq'], port=465):
     receive_server = ReceiveEmail(key=key,
                                   msg_from=msg_from,
-                                  msg_to=msg_to,
                                   msg_subject=msg_subject,
                                   host=host,
                                   port=port, base_output_path=output_path, status=status)
+
     receive_server.get_email()
 
 
-if __name__ == '__main__':
-    # receive_email('key', '', '', '标题', '内容', host=Mail_Type['qq'], port=465)
-    print(666)
-    ReceiveEmail()
